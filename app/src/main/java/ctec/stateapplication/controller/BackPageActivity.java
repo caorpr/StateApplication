@@ -37,14 +37,16 @@ public class BackPageActivity extends Activity
 
     private void loadContent()
     {
-        userText.setText( saveState.getUserName() + " is " + saveState.getAge() + " years old" + "and her/his tired setting is " + saveState.getIsTired());
+        userText.setText(saveState.getUserName() + " is " + saveState.getAge() + " years old" + "and her/his tired setting is " + saveState.getIsTired());
 
     }
 
     private void setupListeners()
     {
-        backButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View clickView) {
+        backButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View clickView)
+            {
                 //Close this screen and return.
                 Intent returnIntent = new Intent();
                 setResult(RESULT_OK, returnIntent);
@@ -54,21 +56,24 @@ public class BackPageActivity extends Activity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_back_page, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 
